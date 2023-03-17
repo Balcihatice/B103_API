@@ -5,6 +5,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Test;
+import testData.JsonPlaceHolderTestData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,7 +35,7 @@ public class Put01 extends JsonplaceholderBaseUrl {
      */
 
     @Test
-    public void test01() {
+    public void put01() {
         spec.pathParams("parametre1", "todos", "parametre2", "198");
 
         //set the expected data
@@ -56,10 +57,31 @@ public class Put01 extends JsonplaceholderBaseUrl {
         Map<String, Object> actualData = response.as(HashMap.class);
         System.out.println("actualData = " + actualData);
 
-        assertEquals(200,response.statusCode());
-        assertEquals(expectedData.get("completed"),actualData.get("completed"));
-        assertEquals(expectedData.get("title"),actualData.get("title"));
-        assertEquals(expectedData.get("userId"),actualData.get("userId"));
+        assertEquals(200, response.statusCode());
+        assertEquals(expectedData.get("completed"), actualData.get("completed"));
+        assertEquals(expectedData.get("title"), actualData.get("title"));
+        assertEquals(expectedData.get("userId"), actualData.get("userId"));
 
     }
+
+        @Test//Dynamic yontem
+        public void put01b() {
+            //Set the URL
+            spec.pathParams("first", "todos", "second", 198);
+            //Set the expected data
+            JsonPlaceHolderTestData obj = new JsonPlaceHolderTestData();
+            Map<String, Object> expectedData = obj.expectedDataMethod(21, "Wash the dishes", false);
+            System.out.println("expectedData = " + expectedData);
+            //Send the request and get the response
+            Response response = given().spec(spec).contentType(ContentType.JSON).body(expectedData).put("/{first}/{second}");
+            response.prettyPrint();
+            //Do Assertion
+            Map<String, Object> actualData = response.as(HashMap.class);
+            System.out.println("actualData = " + actualData);
+            assertEquals(200, response.statusCode());
+            assertEquals(expectedData.get("completed"), actualData.get("completed"));
+            assertEquals(expectedData.get("title"), actualData.get("title"));
+            assertEquals(expectedData.get("userId"), actualData.get("userId"));
+        }
+
 }

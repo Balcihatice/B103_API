@@ -30,4 +30,20 @@ public class JsonPlaceHolderTestData {
         requestBodyMap.put("id", 70);
         return requestBodyMap;
     }
+
+    /*
+    Map<String, Object> expectedData = new HashMap<>();
+        expectedData.put("userId", 21);
+        expectedData.put("title", "Wash the dishes");
+        expectedData.put("completed", false);
+     */
+    public Map<String,Object> expectedDataMethod(Integer userId, String title, Boolean completed){
+
+        Map<String,Object> expectedData = new HashMap<>( );
+        expectedData.put("userId",userId);
+        expectedData.put("title",title);
+        expectedData.put("completed",completed);
+
+        return expectedData;
+    }
 }
