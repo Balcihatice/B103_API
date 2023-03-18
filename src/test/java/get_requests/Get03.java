@@ -56,7 +56,8 @@ Given
         Assert.assertEquals(false, jsonPath.getBoolean("completed"));
         Assert.assertEquals(2, jsonPath.getInt("userId"));
 
-        //Tek body() methodu içerisinde çoklu assertion yaparak soft assertion oluşturabilirsiniz. Fail durumunda body() içerisinde Java çalışmayı durdurmaz.
+        //Tek body() methodu içerisinde çoklu assertion yaparak soft assertion oluşturabilirsiniz.
+        // Fail durumunda body() içerisinde Java çalışmayı durdurmaz.
         //Çoklu body() methodu ile assertion yapıldığında fail durumunda Java bir sonraki body() methodu öncesi çaılışmayı durdurur.
     }
 

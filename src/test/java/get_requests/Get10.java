@@ -1,4 +1,5 @@
 package get_requests;
+
 import base_urls.GoRestBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
@@ -6,6 +7,7 @@ import testData.GoRestTestData;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 

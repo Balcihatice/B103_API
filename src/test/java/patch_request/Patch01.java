@@ -37,11 +37,14 @@ public class Patch01 extends JsonplaceholderBaseUrl {
 
         //Set the expected data
         JsonPlaceHolderTestData obj = new JsonPlaceHolderTestData();
-        Map<String, Object> expectedData = obj.expectedDataMethod(null,"Wash the dishes",null);
+        Map<String, Object> expectedData = obj.expectedDataMethod(null,"Wash the dishes",null);//istemediklerime null yazarsam mapimize eklenmez
         System.out.println("expectedData = " + expectedData);
 
         //Send the request and get the response
-        Response response = given().spec(spec).body(expectedData).patch("/{first}/{second}");
+        Response response = given().
+                spec(spec).
+                body(expectedData).
+                patch("/{first}/{second}");
         response.prettyPrint();
 
 
