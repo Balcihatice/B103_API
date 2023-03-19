@@ -1,6 +1,6 @@
 package get_requests;
 
-import base_urls.JsonplaceholderBaseUrl;
+import base_urls.JsonPlaceHolderBaseUrl;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
@@ -10,7 +10,7 @@ import testData.JsonPlaceHolderTestData;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.*;
 
-public class Blt_BaseUrl_TestData extends JsonplaceholderBaseUrl {
+public class Blt_BaseUrl_TestData extends JsonPlaceHolderBaseUrl {
 
     /*
     {{JsonPlaceHolderBaseUrl}}/22 adresine gidip

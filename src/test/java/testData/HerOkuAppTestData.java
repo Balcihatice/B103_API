@@ -2,7 +2,7 @@ package testData;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HerokuAppTestData {
+public class HerOkuAppTestData {
     public Map<String, String> bookingdatesMapMethod(String checkin, String checkout){
         Map<String, String> bookingdatesMap = new HashMap<>();
         bookingdatesMap.put("checkin",checkin);

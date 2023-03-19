@@ -1,9 +1,8 @@
 package get_requests;
 
-import base_urls.JsonplaceholderBaseUrl;
+import base_urls.JsonPlaceHolderBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import org.junit.Test;
 import testData.JsonPlaceHolderTestData;
 
@@ -14,7 +13,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
 
-public class Blt_Deserialization extends JsonplaceholderBaseUrl {
+public class Blt_Deserialization extends JsonPlaceHolderBaseUrl {
     /*
   https://jsonplaceholder.typicode.com/posts/70 post request gonderildiginde
 donen rsponsun asagidaki gibi oldugunu test edin

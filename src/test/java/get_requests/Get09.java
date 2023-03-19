@@ -3,7 +3,7 @@ package get_requests;
 import base_urls.HerOkuAppBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
-import testData.HerokuAppTestData;
+import testData.HerOkuAppTestData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -78,7 +78,7 @@ public class Get09 extends HerOkuAppBaseUrl {
         spec.pathParams("first","booking","second",794);
 
         //Set the expected data
-        HerokuAppTestData obj1 = new HerokuAppTestData();
+        HerOkuAppTestData obj1 = new HerOkuAppTestData();
         Map<String, String> bookingdatesMap = obj1.bookingdatesMapMethod("2018-01-01","2019-01-01");
 
         Map<String, Object> expectedData = obj1.expectedDataMethod("John","Smith",111,true,bookingdatesMap,"Breakfast");

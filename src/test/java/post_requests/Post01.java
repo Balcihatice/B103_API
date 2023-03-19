@@ -1,5 +1,5 @@
 package post_requests;
-import base_urls.JsonplaceholderBaseUrl;
+import base_urls.JsonPlaceHolderBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
@@ -8,7 +8,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
-public class Post01 extends JsonplaceholderBaseUrl {
+public class Post01 extends JsonPlaceHolderBaseUrl {
 
     /*
          Given
