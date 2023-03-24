@@ -13,7 +13,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
-public class Post05ObjectMapper_Map extends JsonPlaceHolderBaseUrl {
+public class  Post05ObjectMapper_Map extends JsonPlaceHolderBaseUrl {
 
      /*
          Given

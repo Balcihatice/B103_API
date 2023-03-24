@@ -1,6 +1,6 @@
 package homework;
 
-import base_urls.ReqresBaseUrl;
+import base_urls.DummyRestApiBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
@@ -8,7 +8,7 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class H03 extends ReqresBaseUrl {
+public class H03 extends DummyRestApiBaseUrl {
 
      /*
        Given

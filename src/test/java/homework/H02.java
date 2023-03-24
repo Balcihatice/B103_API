@@ -1,13 +1,13 @@
 package homework;
 
-import base_urls.ReqresBaseUrl;
+import base_urls.DummyRestApiBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
-public class H02 extends ReqresBaseUrl {
+public class H02 extends DummyRestApiBaseUrl {
     /*
        Given
            https://reqres.in/api/users/23

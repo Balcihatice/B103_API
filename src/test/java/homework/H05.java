@@ -1,12 +1,11 @@
 package homework;
 
-import base_urls.ReqresBaseUrl;
-import io.restassured.path.json.JsonPath;
+import base_urls.DummyRestApiBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
 import static io.restassured.RestAssured.given;
 
-public class H05 extends ReqresBaseUrl {
+public class H05 extends DummyRestApiBaseUrl {
 
      /*
         Given
