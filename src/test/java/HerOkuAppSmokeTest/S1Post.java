@@ -12,43 +12,42 @@ import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
 public class S1Post extends HerOkuAppBaseUrl {
-
     /*
-  Given
-     1) https://restful-booker.herokuapp.com/booking
-     2) {
-          "firstname" : "Jim",
-          "lastname" : "Brown",
-          "totalprice" : 111,
-          "depositpaid" : true,
-          "bookingdates" : {
-              "checkin" : "2018-01-01",
-              "checkout" : "2019-01-01"
-          },
-          "additionalneeds" : "Breakfast"
-      }
-  When
-      Send post request
-  Then
-      Status Code should be 200
-  And
-      Body should be like:
-      {
-          "bookingid": 9268,
-          "booking": {
-              "firstname": "Jim",
-              "lastname": "Brown",
-              "totalprice": 111,
-              "depositpaid": true,
-              "bookingdates": {
-                  "checkin": "2018-01-01",
-                  "checkout": "2019-01-01"
-              },
-              "additionalneeds": "Breakfast"
-          }
-      }
-   */
-    static int bookingId;
+    Given
+       1) https://restful-booker.herokuapp.com/booking
+       2) {
+            "firstname" : "Jim",
+            "lastname" : "Brown",
+            "totalprice" : 111,
+            "depositpaid" : true,
+            "bookingdates" : {
+                "checkin" : "2018-01-01",
+                "checkout" : "2019-01-01"
+            },
+            "additionalneeds" : "Breakfast"
+        }
+    When
+        Send post request
+    Then
+        Status Code should be 200
+    And
+        Body should be like:
+        {
+            "bookingid": 9268,
+            "booking": {
+                "firstname": "Jim",
+                "lastname": "Brown",
+                "totalprice": 111,
+                "depositpaid": true,
+                "bookingdates": {
+                    "checkin": "2018-01-01",
+                    "checkout": "2019-01-01"
+                },
+                "additionalneeds": "Breakfast"
+            }
+        }
+     */
+    static int bookingId;//Oluşturulan bookingId'yi sonraki classlarda kullanılmak üzere bir containera alıyoruz
 
     @Test
     public void post01() {
@@ -79,9 +78,7 @@ public class S1Post extends HerOkuAppBaseUrl {
 
         assertEquals(expectedData.getAdditionalneeds(), actualData.getBooking().getAdditionalneeds());
 
-        bookingId = actualData.getBookingid();
+        bookingId = actualData.getBookingid();//Oluşturulan bookingId'yi sonraki classlarda kullanılmak üzere bir containera alıyoruz
 
     }
-
-
 }
