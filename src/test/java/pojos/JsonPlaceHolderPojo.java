@@ -1,7 +1,6 @@
 package pojos;
 
-
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;//codehouse objectmapperin annotationu dur
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class JsonPlaceHolderPojo {
